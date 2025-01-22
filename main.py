@@ -2,25 +2,29 @@ import random
 import hangman_words
 import hangman_art
 
-lives = 4
+lives = 3
 print(hangman_art.logo)
 chosen_word = random.choice(hangman_words.word_list)
 
+
+#  ----------hiding the letters for hint purpose----------
 def hide_letter(word):
     letters = word[1::2]
     return '_'.join(letters)
 hidden_word = hide_letter(chosen_word)
 print("HINT:",f"_{hidden_word}_")
+#  ----------hiding the letters for hint purpose----------
 
-#  ________________shuffling the letters____________________
+
+#  __________shuffling the letters and hiding letters___________
 # def shuffle_word(word):
 #     word_list = list(word)
 #     random.shuffle(word_list)
-#     shuffled_word = ''.join(word_list)
+#     shuffled_word = '_'.join(word_list)
 #     return shuffled_word[::2]
 # shuffled_word = shuffle_word(chosen_word)
-# print(shuffled_word)
-#  ________________shuffling the letters____________________
+# print("HINT:",f"_{shuffled_word}_")
+#  __________shuffling the letters and hiding letters___________
 
 placeholder = ""
 word_length = len(chosen_word)
@@ -49,7 +53,7 @@ while not game_over:
         else:
             display += "_"
 
-    print("Word to guess: " + display)
+    print("guess the word: " + display)
 
     print(hangman_art.stages[lives])
     if guess not in chosen_word:
@@ -64,5 +68,5 @@ while not game_over:
 
     if "_" not in display:
         game_over = True
-        print("****************************YOU WIN****************************")
+        print("****************************YOU WON****************************")
 
