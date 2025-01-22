@@ -2,7 +2,7 @@ import random
 import hangman_words
 import hangman_art
 
-lives = 3
+lives = 5
 print(hangman_art.logo)
 chosen_word = random.choice(hangman_words.word_list)
 
