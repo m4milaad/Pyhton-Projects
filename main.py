@@ -2,7 +2,7 @@ import random
 import hangman_words
 import hangman_art
 
-lives = 6
+lives = 4
 print(hangman_art.logo)
 chosen_word = random.choice(hangman_words.word_list)
 
@@ -12,6 +12,7 @@ def hide_letter(word):
 hidden_word = hide_letter(chosen_word)
 print("HINT:",f"_{hidden_word}_")
 
+#  ________________shuffling the letters____________________
 # def shuffle_word(word):
 #     word_list = list(word)
 #     random.shuffle(word_list)
@@ -19,7 +20,7 @@ print("HINT:",f"_{hidden_word}_")
 #     return shuffled_word[::2]
 # shuffled_word = shuffle_word(chosen_word)
 # print(shuffled_word)
-
+#  ________________shuffling the letters____________________
 
 placeholder = ""
 word_length = len(chosen_word)
