@@ -2,18 +2,30 @@ import random
 import hangman_words
 import hangman_art
 
-
 lives = 6
-
 print(hangman_art.logo)
 chosen_word = random.choice(hangman_words.word_list)
-print(chosen_word)
+
+def hide_letter(word):
+    letters = word[1::2]
+    return '_'.join(letters)
+hidden_word = hide_letter(chosen_word)
+print("HINT:",f"_{hidden_word}_")
+
+# def shuffle_word(word):
+#     word_list = list(word)
+#     random.shuffle(word_list)
+#     shuffled_word = ''.join(word_list)
+#     return shuffled_word[::2]
+# shuffled_word = shuffle_word(chosen_word)
+# print(shuffled_word)
+
 
 placeholder = ""
 word_length = len(chosen_word)
 for position in range(word_length):
     placeholder += "_"
-print("Word to guess: " + placeholder)
+print("guess the word: " + placeholder)
 
 game_over = False
 correct_letters = []
