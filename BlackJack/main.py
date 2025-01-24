@@ -73,5 +73,6 @@ def blackjack():
 
 want_to_play = input("Do you want to play the game of black jack(y or n): ").lower()
 while want_to_play == "y":
+    print("\n"*20)
     blackjack()
     want_to_play = input("Do you want to play again (y or n ): ").lower()
