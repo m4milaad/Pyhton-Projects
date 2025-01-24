@@ -8,11 +8,11 @@ chosen_word = random.choice(hangman_words.word_list)
 
 
 #  ----------hiding the letters for hint purpose----------
-def hide_letter(word):
-    letters = word[1::2]
-    return '_'.join(letters)
-hidden_word = hide_letter(chosen_word)
-print("HINT:",f"_{hidden_word}_")
+# def hide_letter(word):
+#     letters = word[1::2]
+#     return '_'.join(letters)
+# hidden_word = hide_letter(chosen_word)
+# print("HINT:",f"_{hidden_word}_")
 #  ----------hiding the letters for hint purpose----------
 
 
@@ -29,7 +29,7 @@ print("HINT:",f"_{hidden_word}_")
 placeholder = ""
 word_length = len(chosen_word)
 for position in range(word_length):
-    placeholder += "_"
+    placeholder += "_ "
 print("guess the word: " + placeholder)
 
 game_over = False

@@ -27,7 +27,7 @@ def final_result(u_cards, c_cards):
         print(f"Your final hand: {u_cards}, Final score: {total_score(u_cards)}")
         print(f"Computers final hand: {c_cards}, Final score: {total_score(c_cards)}")
         print("You win")
-    elif total_score(u_cards) > total_score(c_cards):
+    elif total_score(u_cards) < total_score(c_cards):
         print(f"Your final hand: {u_cards}, Final score: {total_score(u_cards)}")
         print(f"Computers final hand: {c_cards}, Final score: {total_score(c_cards)}")
         print("Computer wins")
@@ -73,6 +73,7 @@ def blackjack():
 
 want_to_play = input("Do you want to play the game of black jack(y or n): ").lower()
 while want_to_play == "y":
+    print(art.logo)
     print("\n"*20)
     blackjack()
     want_to_play = input("Do you want to play again (y or n ): ").lower()

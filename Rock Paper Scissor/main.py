@@ -32,8 +32,8 @@ user = int(input('''0. Rock
 1. Paper
 2. Scissor
 Enter choice: '''))
-print(f"\nComputer chose: \n{visual[comp]}")
-print(f"You chose: \n{visual[user]}")
+print(f"\nComputer chose: {visual[comp]}")
+print(f"You chose: {visual[user]}")
 result = user - comp
 if result == 0:
     print("It's a draw")
@@ -42,7 +42,7 @@ if result == 1 or result == -2:
 if result == 2 or result == -1:
     print("Computer wins")
 """
-COMP	    USER	COMP – USER	    USER – COMP	    WINS	USER	COMP
+COMP	    USER	COMP - USER	    USER - COMP	    WINS	USER	COMP
 ROCK 0	    PAPER 1	    -1	            1	        USER	1	
 ROCK 0	    SCISSOR 2	-2	            2	        COMP		     2
 PAPER 1	    ROCK 0	     1	           -1	        COMP		    -1
