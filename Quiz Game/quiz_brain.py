@@ -9,10 +9,8 @@ class QuizBrain:
 
     def next_question(self):
         user = input(f"Q{self.question_number + 1}. {self.question_list[self.question_number].question} (True/False)")
-        self.check_answer(user.lower(), self.question_list[self.question_number].answer.lower())
         self.question_number += 1
-        
-
+        self.check_answer(user.lower(), self.question_list[self.question_number].answer.lower())
 
     def check_answer(self, user, answer):
         if user == answer:
