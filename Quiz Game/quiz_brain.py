@@ -11,7 +11,7 @@ class QuizBrain:
         user = input(f"Q{self.question_number + 1}. {self.question_list[self.question_number].question} (True/False)")
         self.check_answer(user.lower(), self.question_list[self.question_number].answer.lower())
         self.question_number += 1
-        print(f"Your score is {self.score}/{self.question_number}\n\n")
+        
 
 
     def check_answer(self, user, answer):
@@ -21,3 +21,4 @@ class QuizBrain:
         else:
             print("That's Wrong")
         print(f"The correct answer was {answer.title()}")
+        print(f"Your score is {self.score}/{self.question_number}\n\n")
