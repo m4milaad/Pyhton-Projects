@@ -23,7 +23,7 @@ while game_on:
         game_on = False
         score.game_over()
     for seg in snake.segments[1:]:
-        if seg == snake.segments < 10:
+        if snake.segments[0].distance(seg) < 10:
             game_is_on = False
             score.game_over()
 
