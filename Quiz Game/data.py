@@ -13,7 +13,7 @@ question_data = [
         "type": "boolean",
         "difficulty": "easy",
         "category": "Science: Computers",
-        "question": "Are u Gay?",
+        "question": "The Windows 7 operating system has six main editions.",
         "correct_answer": "True",
         "incorrect_answers": [
             "False"
