@@ -44,3 +44,10 @@ class Snake:
     def right(self):
         if self.segments[0].heading() != 180:
             self.segments[0].seth(0)
+
+    def reset(self):
+        for seg in self.segments:
+            seg.ht()
+            del seg
+        self.segments.clear()
+        self.create_snake()
