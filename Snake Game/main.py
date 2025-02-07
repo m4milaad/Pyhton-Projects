@@ -18,9 +18,17 @@ while game_on:
         food.refresh()
         score.add_score()
         snake.extend()
-    if snake.segments[0].xcor() > 280 or snake.segments[0].xcor() < -280 or snake.segments[0].ycor() > 280 or \
-            snake.segments[0].ycor() < -280:
+    if snake.out_of_boundaries():
         # game_on = False
+        choice = screen.take_input()
+        if choice == "t":
+            snake.reset()
+            score.reset()
+        elif choice == "q":
+            game_on = False
+        else:
+            print("Invalid choice")
+            game_on = False
         snake.reset()
         score.reset()
         # score.game_over()

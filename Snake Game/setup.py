@@ -32,3 +32,5 @@ class Scr:
         self.screen.onkey(fun=snake.down, key="Down")
         self.screen.onkey(fun=snake.left, key="Left")
         self.screen.onkey(fun=snake.right, key="Right")
+    def take_input(self):
+        return self.screen.textinput("Action Required","Press \"t\" to try again or \"q\" to quit")
