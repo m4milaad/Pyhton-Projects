@@ -39,5 +39,3 @@ while game_on:
     for seg in snake.segments[1:]:
         if snake.segments[0].distance(seg) < 10:
             action()
-
-screen.exit()
