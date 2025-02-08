@@ -13,9 +13,9 @@ screen.register_keys(snake)
 def action():
     choice = screen.take_input()
     if choice == "t":
+        screen.register_keys(snake)
         snake.reset()
         score.reset()
-        screen.register_keys(snake)
     elif choice == "q":
         score.reset()
         screen.screen.bye()
