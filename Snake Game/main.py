@@ -15,9 +15,11 @@ def action():
     if choice == "t":
         snake.reset()
         score.reset()
+        screen.register_keys(snake)
     elif choice == "q":
         score.reset()
         screen.screen.bye()
+
     else:
         print("Invalid choice")
         score.reset()
